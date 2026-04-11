@@ -1,0 +1,33 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background: #2C1A0E;
+    border-bottom: 1px solid rgba(212,162,76,0.2);
+}
+
+.nav-logo-text {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Playfair Display', serif;
+    color: #D4A24C;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.nav-logo-text span {
+    font-family: 'Playfair Display', serif;
+}
+
+.nav-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(212,162,76,0.4);
+    cursor: pointer;
+}

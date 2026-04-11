@@ -1,0 +1,53 @@
+.list-product { width: 100%; padding: 20px 30px; margin: 20px; box-sizing: border-box; }
+.list-product h1 { font-size: 22px; font-weight: 700; color: var(--cocoa); margin-bottom: 20px; }
+
+/* Desktop Table */
+.lp-table-wrapper { overflow-x: auto; }
+.lp-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+.lp-table thead th { text-align: left; padding: 12px 14px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.4px; color: #6b7280; font-weight: 600; border-bottom: 2px solid #f0f0f0; background: #fafbfc; white-space: nowrap; }
+.lp-table tbody td { padding: 12px 14px; font-size: 13px; color: #374151; border-bottom: 1px solid #f3f4f6; vertical-align: middle; }
+.lp-table tbody tr:hover { background: #fafbfc; }
+.lp-img { height: 56px; width: 56px; object-fit: cover; border-radius: 8px; border: 1px solid #eee; }
+.lp-name { font-weight: 600; color: var(--cocoa); max-width: 200px; }
+.lp-promo { color: var(--caramel); font-weight: 600; }
+.lp-discount-badge { display: inline-block; background: var(--caramel); color: #fff; font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 4px; margin-left: 6px; }
+.lp-actions { display: flex; align-items: center; gap: 10px; }
+.lp-edit-btn { padding: 6px 14px; background: #6079ff; color: #fff; border: none; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; font-family: Lato, sans-serif;
+.lp-edit-btn:hover { background: #4c63d2; }
+.lp-remove-icon { cursor: pointer; width: 16px; opacity: 0.5; }
+.lp-remove-icon:hover { opacity: 1; }
+
+/* Mobile Cards — hidden on desktop */
+.lp-mobile-cards { display: none; }
+
+/* Edit Modal */
+.lp-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 300; display: flex; align-items: center; justify-content: center; padding: 20px; }
+.lp-modal { background: #fff; border-radius: 14px; padding: 28px; width: 100%; max-width: 520px; max-height: 90vh; overflow-y: auto; }
+.lp-modal h2 { font-size: 18px; font-weight: 700; color: var(--cocoa); margin: 0 0 20px; }
+.lp-modal-field { margin-bottom: 14px; }
+.lp-modal-field label { display: block; font-size: 12px; color: #6b7280; margin-bottom: 4px; font-weight: 600; }
+.lp-modal-field input, .lp-modal-field select { width: 100%; padding: 10px 12px; border: 1.5px solid #e5e7eb; border-radius: 8px; font-size: 14px; font-family: Lato, sans-serif;
+.lp-modal-field input:focus, .lp-modal-field select:focus { border-color: #6079ff; }
+.lp-modal-row { display: flex; gap: 14px; }
+.lp-modal-row .lp-modal-field { flex: 1; }
+.lp-modal-actions { display: flex; gap: 10px; margin-top: 20px; justify-content: flex-end; }
+.lp-modal-cancel { padding: 10px 20px; background: #fff; color: #374151; border: 1.5px solid #e5e7eb; border-radius: 8px; font-size: 14px; cursor: pointer; font-family: Lato, sans-serif;
+.lp-modal-save { padding: 10px 24px; background: #6079ff; color: #fff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: Lato, sans-serif;
+.lp-modal-save:disabled { background: #d1d5db; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .list-product { padding: 15px 10px; margin: 10px; }
+    .lp-table-wrapper { display: none; }
+    .lp-mobile-cards { display: flex; flex-direction: column; gap: 12px; }
+    .lp-mobile-card { display: flex; align-items: center; gap: 12px; background: #fff; border: 1px solid #eee; border-radius: 10px; padding: 12px; }
+    .lp-mobile-img { width: 60px; height: 60px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+    .lp-mobile-info { flex: 1; min-width: 0; }
+    .lp-mobile-name { font-size: 13px; font-weight: 600; color: var(--cocoa); margin: 0 0 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .lp-mobile-cat { font-size: 11px; color: #9ca3af; margin: 0 0 4px; }
+    .lp-mobile-prices { display: flex; gap: 8px; align-items: center; }
+    .lp-mobile-price { font-size: 14px; font-weight: 700; color: var(--caramel); }
+    .lp-mobile-old { font-size: 12px; color: #9ca3af; text-decoration: line-through; }
+    .lp-mobile-actions { display: flex; flex-direction: column; gap: 6px; flex-shrink: 0; }
+    .lp-modal-row { flex-direction: column; gap: 0; }
+}
